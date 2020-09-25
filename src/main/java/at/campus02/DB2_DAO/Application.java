@@ -21,7 +21,10 @@ public class Application {
         //CustomerDAO dao = new CustomerDAOInMemory();
 
         //JDBC Implementierung (DB-Programmierung 1)
-        CustomerDAO dao = new CustomerDAO_JDBC("jdbc:derby:database; create=true");
+        //CustomerDAO_JDBC dao = new CustomerDAO_JDBC("jdbc:derby:database;create=true");
+
+        //JBA Implementierung
+        Customer_DAO_JPA dao = new Customer_DAO_JPA();
 
 
                 //1) CREATE
@@ -40,10 +43,16 @@ public class Application {
         fromDB = dao.read(customer1.getLastname());
         log("Updated customer1 in DB: " + fromDB);
 
+        //3b) Tabelle CUSTOMER Ausgeben
+        //dao.tabelleCustomerAusgeben();
+
         //4) DELETE, dann versuchen aus DB zu holen
         dao.delete(customer1);
         fromDB = dao.read(customer1.getLastname());
         log("Deleted customer1 from DB: " + fromDB);
+
+        //4b) Tabelle CUSTOMER Ausgeben
+        //dao.tabelleCustomerAusgeben();
 
 
     }

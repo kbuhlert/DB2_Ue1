@@ -1,8 +1,14 @@
 package at.campus02.DB2_DAO;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Customer {
 
+    @Id
     private String lastname;
+
     private String firstname;
     private Integer age;    //wir nehmen Integer statt int, da Integer nullable ist und somit das Alter weggelassen werden kann statt 0 zu schreiben
 
