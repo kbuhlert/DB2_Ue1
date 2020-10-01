@@ -15,8 +15,8 @@
             <property name="javax.persistence.jdbc.url"
                       value="jdbc:derby:database;create=true"/>
             <property name="javax.persistence.jdbc.driver"
-                      value="org.apache.derby.jdbc.EmbeddedDriver"/>
-            <!--
+                      value="org.apache.derby.jdbc.EmbeddedDriver"/>    <!--Wie nehmen Embedded Driver, weil Treiber in der??>
+            <!-
             Settings des PersistenceProviders sind ebenfalls möglich.
             In dem Fall möchten wir alle Tabellen beim Start der Verbindung löschen und neu anlegen. ("drop-and-create-tables", nur "create-tables" geht auch)
            eclipselink ist Link zu PersistenceProvider
